@@ -66,7 +66,9 @@
     <Compile Include="Entities\Teacher.cs" />
     <Compile Include="Entities\Team.cs" />
     <Compile Include="Entities\Visit.cs" />
+    <Compile Include="Heplers\ApplicationUserHelper.cs" />
     <Compile Include="Heplers\RolesHelper.cs" />
+    <Compile Include="Heplers\TeacherHelper.cs" />
     <Compile Include="Migrations\201608200801554_Initial.cs" />
     <Compile Include="Migrations\201608200801554_Initial.Designer.cs">
       <DependentUpon>201608200801554_Initial.cs</DependentUpon>

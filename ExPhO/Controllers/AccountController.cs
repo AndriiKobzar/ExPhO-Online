@@ -10,6 +10,8 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using ExPhO.Models;
 using ExPhO.Core.Entities;
+using System.Web.Security;
+using ExPho.Core.Heplers;
 
 namespace ExPhO.Controllers
 {
@@ -160,9 +162,9 @@ namespace ExPhO.Controllers
                     
                     // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
-                    // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
-                    // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
-                    // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
+                     string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
+                     var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code, role=model.Role }, protocol: Request.Url.Scheme);
+                     await UserManager.SendEmailAsync(user.Id, "Підтвердіть обліковий запис", "Підтвердіть обліковий запис за <a href=\"" + callbackUrl + "\">посиланням</a>");
 
                     return RedirectToAction("Index", "Home");
                 }
@@ -176,13 +178,35 @@ namespace ExPhO.Controllers
         //
         // GET: /Account/ConfirmEmail
         [AllowAnonymous]
-        public async Task<ActionResult> ConfirmEmail(string userId, string code)
+        public async Task<ActionResult> ConfirmEmail(string userId, string code, string role)
         {
             if (userId == null || code == null)
             {
                 return View("Error");
             }
             var result = await UserManager.ConfirmEmailAsync(userId, code);
+            if (result.Succeeded)
+            {
+                var user = new ApplicationUserHelper().GetById(userId);
+                Roles.AddUserToRole(user.Email, role);
+                switch (role)
+                {
+                    case RolesHelper.JURY:
+                        Roles.AddUserToRole(user.Email, role);
+                        new TeacherHelper().Insert(new Teacher() { Email = user.Email, Name = user.UserName });
+                        break;
+                    case RolesHelper.LEARNER:
+                        Roles.AddUserToRole(user.Email, role);
+                        new LearnerHelper().Insert(new Learner() { Email = user.Email, Name = user.UserName });
+                        break;
+                    case RolesHelper.TEACHER:
+                        Roles.AddUserToRole(user.Email, role);
+                        new JuryHelper().Insert(new Jury() { Email = user.Email, Name = user.UserName });
+                        break;
+                    default:
+                        break;
+                }
+            }
             return View(result.Succeeded ? "ConfirmEmail" : "Error");
         }
 

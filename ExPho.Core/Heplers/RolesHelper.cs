@@ -8,9 +8,9 @@ namespace ExPho.Core.Heplers
 {
     public static class RolesHelper
     {
-        public static readonly string ADMINISTRATOR = "Administrator";
-        public static readonly string TEACHER = "Teacher";
-        public static readonly string LEARNER = "Learner";
-        public static readonly string JURY = "Jury";
+        public const string ADMINISTRATOR = "Administrator";
+        public const string TEACHER = "Teacher";
+        public const string LEARNER = "Learner";
+        public const string JURY = "Jury";
     }
 }
