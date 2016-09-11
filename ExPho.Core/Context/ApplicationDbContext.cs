@@ -27,5 +27,6 @@ namespace ExPho.Core.Context
         public DbSet<Visit> Visits { get; set; }
         public DbSet<Team> Teams { get; set; }
         public DbSet<Problem> Problems { get; set; }
+        public DbSet<Olympiad> Olympiads { get; set; }
     }
 }

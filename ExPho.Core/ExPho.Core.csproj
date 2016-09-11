@@ -62,13 +62,17 @@
     <Compile Include="Entities\ApplicationUser.cs" />
     <Compile Include="Entities\Jury.cs" />
     <Compile Include="Entities\Learner.cs" />
+    <Compile Include="Entities\Olympiad.cs" />
     <Compile Include="Entities\Problem.cs" />
     <Compile Include="Entities\Teacher.cs" />
     <Compile Include="Entities\Team.cs" />
     <Compile Include="Entities\Visit.cs" />
     <Compile Include="Heplers\ApplicationUserHelper.cs" />
+    <Compile Include="Heplers\JuryHelper.cs" />
+    <Compile Include="Heplers\LearnerHelper.cs" />
     <Compile Include="Heplers\RolesHelper.cs" />
     <Compile Include="Heplers\TeacherHelper.cs" />
+    <Compile Include="Heplers\TeamHelper.cs" />
     <Compile Include="Migrations\201608200801554_Initial.cs" />
     <Compile Include="Migrations\201608200801554_Initial.Designer.cs">
       <DependentUpon>201608200801554_Initial.cs</DependentUpon>
