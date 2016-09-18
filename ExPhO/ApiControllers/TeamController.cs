@@ -25,7 +25,7 @@ namespace ExPhO.ApiControllers
 
         public List<Team> GetAllTeams(int olympiadId)
         {
-            return _helper.GetAllForOlympiad();
+            return _helper.GetAllForOlympiad(olympiadId);
         }
     }
 
@@ -35,5 +35,13 @@ namespace ExPhO.ApiControllers
         public string School { get; set; }
         public int TeacherId { get; set; }
         public int OlympiadId { get; set; }
+        public List<LearnerModel> Members { get; set; }
+    }
+
+    public class LearnerModel
+    {
+        public string Name { get; set; }
+        public int Form { get; set; }
+        public string Email { get; set; }
     }
 }

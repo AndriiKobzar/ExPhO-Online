@@ -6,6 +6,7 @@ using System.Linq;
 using ExPho.Core.Context;
 using ExPho.Core.Heplers;
 using ExPhO.Core.Entities;
+using ExPhO.Utils;
 
 namespace ExPhO.ApiControllers
 {
@@ -18,6 +19,14 @@ namespace ExPhO.ApiControllers
         public HttpResponseMessage AddTeam(int olympiadId, TeamModel team)
         {
             var olympiad = _context.Olympiads.FirstOrDefault(o => o.Id == olympiadId);
+            if(team.Members!=null && team.Members.Count != 0 && team.Members.Count <= 6)
+            {
+                team.Members.ForEach((learner) =>
+                {
+                    ApplicationUser user = new ApplicationUser() { };
+                    HttpContext.GetOwinContext().GetUserManager<ApplicationUserManager>().CreateAsync(user, PasswordUtil.GeneratePassword());
+                });
+            }
             var _team = new Team()
             {
                 Name = team.Name,
