@@ -27,5 +27,19 @@ namespace ExPho.Core.Heplers
             context.SaveChanges();
             return olympiad;
         }
+
+        public void GenerateSchedule()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void PutMark(int olympiadId, int teamId, int problemId, double mark)
+        {
+            var olympiad = this.GetById(olympiadId);
+            var team = olympiad.Teams.FirstOrDefault(t=>t.Id==teamId);
+            var visit = team.Visits.FirstOrDefault(v=>v.Problem.Id==problemId);
+            visit.Mark = mark;
+            context.SaveChanges();
+        }
     }
 }
