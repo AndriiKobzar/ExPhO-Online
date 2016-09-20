@@ -34,5 +34,15 @@ namespace ExPho.Core.Heplers
         {
             return _context.Teams.Where(t => t.Olympiad.Id == id).ToList();
         }
+
+        public List<Visit> GetSchedule(Team team)
+        {
+            return 
+            (from visit 
+            in team.Olympiad.Schedule 
+            where visit.Team.Id==team.Id 
+            orderby visit.Time ascending 
+            select visit).ToList();
+        }
     }
 }

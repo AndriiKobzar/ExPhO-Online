@@ -11,6 +11,8 @@ namespace ExPhO.Core.Entities
         public string Email { get; set; }
         public string Name { get; set; }
         public string Title { get; set; }
+
         public virtual List<Visit> Visits { get; set; }
+        public virtual Problem Problem { get; set; }
     }
 }

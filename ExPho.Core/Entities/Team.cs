@@ -20,4 +20,3 @@ namespace ExPhO.Core.Entities
         public double SumPoints => (from visit in Visits select visit.Mark).Sum();
     }
 }
-

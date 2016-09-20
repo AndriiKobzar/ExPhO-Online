@@ -39,5 +39,15 @@ namespace ExPho.Core.Heplers
             context.SaveChanges();
             return jury;
         }
+
+        public List<Visit> GetSchedule(Olympiad olympiad, Jury jury)
+        {
+            return 
+            (from visit 
+            in Olympiad.Schedule 
+            where visit.Problem.Id==jury.Problem.Id 
+            orderby visit.Time ascending 
+            select visit).ToList();
+        }
     }
 }

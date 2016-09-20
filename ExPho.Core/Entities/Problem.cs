@@ -11,5 +11,7 @@ namespace ExPhO.Core.Entities
         public string Title { get; set; }
         public string Description { get; set; }
         public string Equipment { get; set; }
+
+        public virtual List<Jury> Juries { get; set; }
     }
 }

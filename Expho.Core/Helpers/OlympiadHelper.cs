@@ -28,8 +28,18 @@ namespace ExPho.Core.Heplers
             return olympiad;
         }
 
-        public void GenerateSchedule()
+        public void GenerateSchedule(Olympiad olympiad, DateTime start, DateTime end)
         {
+            foreach (var team in olympiad.Teams)
+            {
+                foreach (var problem in olympiad.Problems)
+                {
+                    var visit = new Visit()
+                    {
+
+                    }
+                }
+            }
             throw new NotImplementedException();
         }
 
