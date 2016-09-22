@@ -36,13 +36,15 @@ namespace ExPho.Core.Heplers
             var sortedTeams = olympiad.Teams.ToList().OrderBy(s=>rnd.Next());
             var sortedProblems = olympiad.Tasks.ToList().OrderBy(s=>rnd.Next());
 
+            var duration = (start-end).Minutes/Math.Max(sortedTeams.Count, sortedProblems.Count);
+
             var currentTime = start;
-            var shuffleCounter = 0;
-            if (sortedProblems.Count>sortedTeams.Count)
+            var counter = 0;
+            if (sortedProblems.Count>=sortedTeams.Count)
             {
                 foreach (var team in sortedTeams)
                 {
-                    var counter = 0;
+                    currentTime = start.AddMinutes(duration*counter);   
                     foreach (var problem in sortedProblems)
                     {
                         var visit = new Visit()
@@ -56,17 +58,17 @@ namespace ExPho.Core.Heplers
                         currentTime.AddMinutes(visitDuration);
                         if (currentTime>=end)
                         {
-                            currentTime = start.AddMinutes(visitDuration*++shuffleCounter);
+                            currentTime = start;
                         }
-                        counter++;
                     }
+                    counter++;
                 }
             }
             else
             {
                 foreach (var problem in sortedProblems)
                 {
-                    var counter = 0;
+                    currentTime = start.AddMinutes(duration*counter);   
                     foreach (var team in sortedTeams)
                     {
                         var visit = new Visit()
@@ -80,10 +82,10 @@ namespace ExPho.Core.Heplers
                         currentTime.AddMinutes(visitDuration);
                         if (currentTime>=end)
                         {
-                            currentTime = start.AddMinutes(visitDuration*++shuffleCounter);
+                            currentTime = start;
                         }
-                        counter++;
                     }
+                    counter++;
                 }
             }
             context.SaveChanges();
