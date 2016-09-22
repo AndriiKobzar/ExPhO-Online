@@ -28,19 +28,66 @@ namespace ExPho.Core.Heplers
             return olympiad;
         }
 
-        public void GenerateSchedule(Olympiad olympiad, DateTime start, DateTime end)
-        {
-            foreach (var team in olympiad.Teams)
-            {
-                foreach (var problem in olympiad.Problems)
-                {
-                    var visit = new Visit()
-                    {
+        public List<Visit> GenerateSchedule(Olympiad olympiad, DateTime start, DateTime end)
+        {         
+            olympiad.Visits.Clear();
 
+            var rnd = new Random();
+            var sortedTeams = olympiad.Teams.ToList().OrderBy(s=>rnd.Next());
+            var sortedProblems = olympiad.Tasks.ToList().OrderBy(s=>rnd.Next());
+
+            var currentTime = start;
+            var shuffleCounter = 0;
+            if (sortedProblems.Count>sortedTeams.Count)
+            {
+                foreach (var team in sortedTeams)
+                {
+                    var counter = 0;
+                    foreach (var problem in sortedProblems)
+                    {
+                        var visit = new Visit()
+                        {
+                            Olympiad = olympiad,
+                            Team = team,
+                            Problem = problem,
+                            Time = currentTime
+                        }
+                        olympiad.Visits.Add(visit);
+                        currentTime.AddMinutes(visitDuration);
+                        if (currentTime>=end)
+                        {
+                            currentTime = start.AddMinutes(visitDuration*++shuffleCounter);
+                        }
+                        counter++;
                     }
                 }
             }
-            throw new NotImplementedException();
+            else
+            {
+                foreach (var problem in sortedProblems)
+                {
+                    var counter = 0;
+                    foreach (var team in sortedTeams)
+                    {
+                        var visit = new Visit()
+                        {
+                            Olympiad = olympiad,
+                            Team = team,
+                            Problem = problem,
+                            Time = currentTime
+                        }
+                        olympiad.Visits.Add(visit);
+                        currentTime.AddMinutes(visitDuration);
+                        if (currentTime>=end)
+                        {
+                            currentTime = start.AddMinutes(visitDuration*++shuffleCounter);
+                        }
+                        counter++;
+                    }
+                }
+            }
+            context.SaveChanges();
+            return olympiad.Schedule;
         }
 
         public void PutMark(int olympiadId, int teamId, int problemId, double mark)
@@ -50,6 +97,21 @@ namespace ExPho.Core.Heplers
             var visit = team.Visits.FirstOrDefault(v=>v.Problem.Id==problemId);
             visit.Mark = mark;
             context.SaveChanges();
+        }
+
+        private List<DateTime> GenerateTimes(DateTime start, DateTime end, int count)
+        {
+            var duration = (start-end).Minutes/count;
+            for (int i = 0; i < count; i++)
+            {
+                yield return start.AddMinutes(i*duration);
+            }
+            
+        }
+
+        private void CycleMove(IList collection)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -14,11 +14,11 @@ namespace ExPhO.ApiControllers
     public class AdministratorController:ApiController
     {
         ApplicationDbContext _context = new ApplicationDbContext();
-
+        OlympiadHelper helper = new OlympiadHelper();
         [HttpGet]
         public Olympiad GetOlympiad(int id)
         {
-            var olympiad = _context.Olympiads.FirstOrDefault(o => o.Id == id);
+            var olympiad = helper.GetById(id);
             if (olympiad == null)
             {
                 throw new HttpException(404,"Olympiad not found");
@@ -56,6 +56,21 @@ namespace ExPhO.ApiControllers
             olympiad.Juries.Add(jury);
             _context.SaveChanges();
             return new HttpResponseMessage(HttpStatusCode.Accepted);
+        }
+        [HttpGet]
+        public List<Visit> GetSchedule(int olympiadId)
+        {
+            return helper.GetById(olympiadId).Schedule.ToList();
+        }
+        [HttpPost]
+        public List<Visit> CreateSchedule(CreateScheduleModel model)
+        {
+            var olympiad=helper.GetById(model.olympiadId);
+            if (olympiad==null)
+            {
+                throw new HttpException(404, "Olympiad not found");
+            }
+            return helper.GenerateSchedule(olympiad, model.start, model.end);
         }
     }
 }
