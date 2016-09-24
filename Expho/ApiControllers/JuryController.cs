@@ -1,8 +1,11 @@
 using System.Collections.Generic;
-using Expho.Core.Entities;
-using Expho.Core.Helpers;
+using System.Web.Http;
+using ExPho.Core.Helpers;
+using ExPhO.Core.Entities;
+using System.Net.Http;
+using System.Net;
 
-namespace Expho
+namespace ExPho
 {
     public class JuryController : ApiController
     {

@@ -1,10 +1,11 @@
-﻿using System.Net;
+﻿using Microsoft.AspNet.Identity.Owin;
+using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Web;
 using System.Web.Http;
-using System.Linq;
 using ExPho.Core.Context;
-using ExPho.Core.Heplers;
+using ExPho.Core.Helpers;
 using ExPhO.Core.Entities;
 using ExPhO.Utils;
 
@@ -24,7 +25,7 @@ namespace ExPhO.ApiControllers
                 team.Members.ForEach((learner) =>
                 {
                     ApplicationUser user = new ApplicationUser() { };
-                    HttpContext.GetOwinContext().GetUserManager<ApplicationUserManager>().CreateAsync(user, PasswordUtil.GeneratePassword());
+                    HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>().CreateAsync(user, PasswordUtil.GeneratePassword());
                 });
             }
             var _team = new Team()
@@ -37,7 +38,7 @@ namespace ExPhO.ApiControllers
         public HttpResponseMessage AddTeamMember(int teamId, LearnerModel model)
         {
             new TeamHelper().GetById(teamId).Learners.Add(new Learner());
-            _context.SaveSchanges();
+            _context.SaveChanges();
             return new HttpResponseMessage(HttpStatusCode.Accepted);
         }
     }

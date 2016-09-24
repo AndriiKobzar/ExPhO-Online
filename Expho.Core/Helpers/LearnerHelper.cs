@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ExPho.Core.Heplers
+namespace ExPho.Core.Helpers
 {
     public class LearnerHelper
     {

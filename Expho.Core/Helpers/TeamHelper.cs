@@ -3,7 +3,7 @@ using System.Linq;
 using ExPho.Core.Context;
 using ExPhO.Core.Entities;
 
-namespace ExPho.Core.Heplers
+namespace ExPho.Core.Helpers
 {
     public class TeamHelper
     {

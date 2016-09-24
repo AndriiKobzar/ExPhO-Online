@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ExPho.Core.Heplers
+namespace ExPho.Core.Helpers
 {
     public class JuryHelper
     {
@@ -39,12 +39,19 @@ namespace ExPho.Core.Heplers
             context.SaveChanges();
             return jury;
         }
-
+        public void PutMark(int olympiadId, int teamId, int problemId, double mark)
+        {
+            var olympiad = new OlympiadHelper().GetById(olympiadId);
+            var team = olympiad.Teams.FirstOrDefault(t => t.Id == teamId);
+            var visit = team.Visits.FirstOrDefault(v => v.Problem.Id == problemId);
+            visit.Mark = mark;
+            context.SaveChanges();
+        }
         public List<Visit> GetSchedule(Olympiad olympiad, Jury jury)
         {
             return 
             (from visit 
-            in Olympiad.Schedule 
+            in olympiad.Schedule 
             where visit.Problem.Id==jury.Problem.Id 
             orderby visit.Time ascending 
             select visit).ToList();

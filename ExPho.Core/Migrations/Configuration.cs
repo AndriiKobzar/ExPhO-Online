@@ -1,6 +1,6 @@
 namespace ExPho.Core.Migrations
 {
-    using Heplers;
+    using Helpers;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;

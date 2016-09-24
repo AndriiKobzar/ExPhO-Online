@@ -4,9 +4,11 @@ using System.Net.Http;
 using System.Web;
 using System.Web.Http;
 using ExPho.Core.Context;
-using ExPho.Core.Heplers;
+using ExPho.Core.Helpers;
 using ExPhO.Core.Entities;
 using ExPhO.Models;
+using System.Collections.Generic;
+using System;
 
 namespace ExPhO.ApiControllers
 {
@@ -72,5 +74,12 @@ namespace ExPhO.ApiControllers
             }
             return helper.GenerateSchedule(olympiad, model.start, model.end);
         }
+    }
+
+    public class CreateScheduleModel
+    {
+        public int olympiadId { get; set; }
+        public DateTime start { get; set; }
+        public DateTime end { get; set; }
     }
 }

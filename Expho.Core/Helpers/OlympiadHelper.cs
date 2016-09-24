@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ExPho.Core.Heplers
+namespace ExPho.Core.Helpers
 {
     public class OlympiadHelper
     {
@@ -30,11 +30,11 @@ namespace ExPho.Core.Heplers
 
         public List<Visit> GenerateSchedule(Olympiad olympiad, DateTime start, DateTime end)
         {         
-            olympiad.Visits.Clear();
+            olympiad.Schedule.Clear();
 
             var rnd = new Random();
-            var sortedTeams = olympiad.Teams.ToList().OrderBy(s=>rnd.Next());
-            var sortedProblems = olympiad.Tasks.ToList().OrderBy(s=>rnd.Next());
+            var sortedTeams = olympiad.Teams.OrderBy(s=>rnd.Next()).ToList();
+            var sortedProblems = olympiad.Problems.OrderBy(s=>rnd.Next()).ToList();
 
             var duration = (start-end).Minutes/Math.Max(sortedTeams.Count, sortedProblems.Count);
 
@@ -53,9 +53,9 @@ namespace ExPho.Core.Heplers
                             Team = team,
                             Problem = problem,
                             Time = currentTime
-                        }
-                        olympiad.Visits.Add(visit);
-                        currentTime.AddMinutes(visitDuration);
+                        };
+                        olympiad.Schedule.Add(visit);
+                        currentTime.AddMinutes(duration);
                         if (currentTime>=end)
                         {
                             currentTime = start;
@@ -77,9 +77,9 @@ namespace ExPho.Core.Heplers
                             Team = team,
                             Problem = problem,
                             Time = currentTime
-                        }
-                        olympiad.Visits.Add(visit);
-                        currentTime.AddMinutes(visitDuration);
+                        };
+                        olympiad.Schedule.Add(visit);
+                        currentTime.AddMinutes(duration);
                         if (currentTime>=end)
                         {
                             currentTime = start;
@@ -90,30 +90,6 @@ namespace ExPho.Core.Heplers
             }
             context.SaveChanges();
             return olympiad.Schedule;
-        }
-
-        public void PutMark(int olympiadId, int teamId, int problemId, double mark)
-        {
-            var olympiad = this.GetById(olympiadId);
-            var team = olympiad.Teams.FirstOrDefault(t=>t.Id==teamId);
-            var visit = team.Visits.FirstOrDefault(v=>v.Problem.Id==problemId);
-            visit.Mark = mark;
-            context.SaveChanges();
-        }
-
-        private List<DateTime> GenerateTimes(DateTime start, DateTime end, int count)
-        {
-            var duration = (start-end).Minutes/count;
-            for (int i = 0; i < count; i++)
-            {
-                yield return start.AddMinutes(i*duration);
-            }
-            
-        }
-
-        private void CycleMove(IList collection)
-        {
-            throw new NotImplementedException();
         }
     }
 }

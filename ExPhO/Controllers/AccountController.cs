@@ -11,7 +11,7 @@ using Microsoft.Owin.Security;
 using ExPhO.Models;
 using ExPhO.Core.Entities;
 using System.Web.Security;
-using ExPho.Core.Heplers;
+using ExPho.Core.Helpers;
 
 namespace ExPhO.Controllers
 {

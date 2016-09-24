@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="172865f5-cb75-403e-b4ef-683b6d246b01" name="Default" comment="" />
+    <ignored path="ExPhO.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="ExPhO" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="AdministratorController.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../ExPhO/Controllers/AdministratorController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="512">
+              <caret line="32" column="9" selection-start-line="21" selection-start-column="8" selection-end-line="32" selection-end-column="9" />
+              <folding>
+                <marker date="1473522430359" expanded="true" signature="6:152" ph="..." />
+                <marker date="1473522430359" expanded="true" signature="6:178" ph="..." />
+                <marker date="1473522430359" expanded="true" signature="6:205" ph="..." />
+                <marker date="1473522430359" expanded="true" signature="234:848" ph="{...}" />
+                <marker date="1473522430359" expanded="true" signature="341:846" ph="{...}" />
+                <marker date="1473522430359" expanded="true" signature="451:498" ph="{...}" />
+                <marker date="1473522430359" expanded="true" signature="561:840" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdministratorController.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../ExPhO/ApiControllers/AdministratorController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="206">
+              <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
+              <folding>
+                <marker date="1473617386833" expanded="true" signature="6:199" ph="..." />
+                <marker date="1473617386833" expanded="true" signature="231:1748" ph="{...}" />
+                <marker date="1473617386833" expanded="true" signature="339:1746" ph="{...}" />
+                <marker date="1473617386833" expanded="true" signature="476:733" ph="{...}" />
+                <marker date="1473617386833" expanded="true" signature="814:1087" ph="{...}" />
+                <marker date="1473617386833" expanded="true" signature="1159:1740" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TeacherController.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../ExPhO/ApiControllers/TeacherController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding>
+                <marker date="1473619709051" expanded="true" signature="6:179" ph="..." />
+                <marker date="1473619709051" expanded="true" signature="211:796" ph="{...}" />
+                <marker date="1473619709051" expanded="true" signature="309:794" ph="{...}" />
+                <marker date="1473619709051" expanded="true" signature="478:788" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TeamController.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../ExPhO/ApiControllers/TeamController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="334">
+              <caret line="27" column="44" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
+              <folding>
+                <marker date="1473614664065" expanded="true" signature="6:190" ph="..." />
+                <marker date="1473614664065" expanded="true" signature="222:980" ph="{...}" />
+                <marker date="1473614664065" expanded="true" signature="270:767" ph="{...}" />
+                <marker date="1473614664065" expanded="true" signature="427:638" ph="{...}" />
+                <marker date="1473614664065" expanded="true" signature="693:761" ph="{...}" />
+                <marker date="1473614664065" expanded="true" signature="795:978" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TeamHelper.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../ExPho.Core/Heplers/TeamHelper.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="34" column="74" selection-start-line="34" selection-start-column="74" selection-end-line="34" selection-end-column="74" />
+              <folding>
+                <marker date="1473615123709" expanded="true" signature="6:105" ph="..." />
+                <marker date="1473615123709" expanded="true" signature="135:825" ph="{...}" />
+                <marker date="1473615123709" expanded="true" signature="165:823" ph="{...}" />
+                <marker date="1473615123709" expanded="true" signature="247:318" ph="{...}" />
+                <marker date="1473615123709" expanded="true" signature="355:438" ph="{...}" />
+                <marker date="1473615123709" expanded="true" signature="474:538" ph="{...}" />
+                <marker date="1473615123709" expanded="true" signature="574:668" ph="{...}" />
+                <marker date="1473615123709" expanded="true" signature="721:817" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JuryHelper.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../ExPho.Core/Heplers/JuryHelper.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1471781807501" expanded="true" signature="6:168" ph="..." />
+                <marker date="1471781807501" expanded="true" signature="198:832" ph="{...}" />
+                <marker date="1471781807501" expanded="true" signature="228:830" ph="{...}" />
+                <marker date="1471781807501" expanded="true" signature="309:379" ph="{...}" />
+                <marker date="1471781807501" expanded="true" signature="415:516" ph="{...}" />
+                <marker date="1471781807501" expanded="true" signature="561:668" ph="{...}" />
+                <marker date="1471781807501" expanded="true" signature="706:824" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OlympiadModel.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../ExPhO/Models/OlympiadModel.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+              <folding>
+                <marker date="1473522430167" expanded="true" signature="37:168" ph="{...}" />
+                <marker date="1473522430167" expanded="true" signature="70:166" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ApplicationDbContext.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../ExPho.Core/Context/ApplicationDbContext.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="464">
+              <caret line="29" column="52" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
+              <folding>
+                <marker date="1473521600427" expanded="true" signature="6:217" ph="..." />
+                <marker date="1473521600427" expanded="true" signature="247:939" ph="{...}" />
+                <marker date="1473521600427" expanded="true" signature="324:937" ph="{...}" />
+                <marker date="1473521600427" expanded="true" signature="432:452" ph="{...}" />
+                <marker date="1473521600427" expanded="true" signature="505:572" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Olympiad.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../ExPho.Core/Entities/Olympiad.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+              <folding>
+                <marker date="1473520948459" expanded="true" signature="6:13" ph="..." />
+                <marker date="1473520948459" expanded="true" signature="6:47" ph="..." />
+                <marker date="1473520948459" expanded="true" signature="78:349" ph="{...}" />
+                <marker date="1473520948459" expanded="true" signature="106:347" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Team.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../ExPho.Core/Entities/Team.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding>
+                <marker date="1473601445942" expanded="true" signature="6:96" ph="..." />
+                <marker date="1473601445942" expanded="true" signature="128:762" ph="{...}" />
+                <marker date="1473601445942" expanded="true" signature="135:345" ph="/* ... */" />
+                <marker date="1473601445942" expanded="true" signature="367:760" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/../../ExPho.Core/Entities/Olympiad.cs" />
+        <option value="$PROJECT_DIR$/../../ExPho.Core/Context/ApplicationDbContext.cs" />
+        <option value="$PROJECT_DIR$/../../ExPhO/Controllers/AdministratorController.cs" />
+        <option value="$PROJECT_DIR$/../../ExPhO/Models/OlympiadModel.cs" />
+        <option value="$PROJECT_DIR$/../../ExPho.Core/Entities/Team.cs" />
+        <option value="$PROJECT_DIR$/../../ExPhO/ApiControllers/TeamController.cs" />
+        <option value="$PROJECT_DIR$/../../ExPho.Core/Heplers/TeamHelper.cs" />
+        <option value="$PROJECT_DIR$/../../ExPhO/ApiControllers/AdministratorController.cs" />
+        <option value="$PROJECT_DIR$/../../ExPhO/ApiControllers/TeacherController.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="SolutionExplorer">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ExPhO (2 projects)" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ExPho.Core" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ExPhO (2 projects)" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ExPho.Core" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Heplers" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ExPhO (2 projects)" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ExPho.Core" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Entities" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ExPhO (2 projects)" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ExPho.Core" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Context" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ExPhO (2 projects)" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ExPhO" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ExPhO (2 projects)" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ExPhO" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Models" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ExPhO (2 projects)" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ExPhO" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ApiControllers" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <option name="show-file-system" value="false" />
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="Team&#9;null&#9;null" />
+  </component>
+  <component name="RunManager" selected=".NET Project.Default">
+    <configuration default="true" type="DotNetProject" factoryName=".NET Project">
+      <option name="PROJECT_PATH" value="" />
+      <option name="PROJECT_KIND" value="None" />
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Default" type="DotNetProject" factoryName=".NET Project">
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/../../ExPhO/ExPhO.csproj" />
+      <option name="PROJECT_KIND" value="Web" />
+      <option name="EXE_PATH" value="C:/Program Files/IIS Express/iisexpress.exe" />
+      <option name="PROGRAM_PARAMETERS" value="/config:$PROJECT_DIR$/../config/applicationhost.config /site:ExPhO /apppool:Clr4IntegratedAppPool" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../ExPhO" />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue=".NET Project.Default" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="172865f5-cb75-403e-b4ef-683b6d246b01" name="Default" comment="" />
+      <created>1473509422666</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1473509422666</updated>
+      <workItem from="1473509435816" duration="15517000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="15517000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Errors in solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UnitTesting" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Change Signature" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18374817" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../../ExPhO/Controllers/AdministratorController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="32" column="9" selection-start-line="21" selection-start-column="8" selection-end-line="32" selection-end-column="9" />
+          <folding>
+            <marker date="1473522430359" expanded="true" signature="6:152" ph="..." />
+            <marker date="1473522430359" expanded="true" signature="6:178" ph="..." />
+            <marker date="1473522430359" expanded="true" signature="6:205" ph="..." />
+            <marker date="1473522430359" expanded="true" signature="234:848" ph="{...}" />
+            <marker date="1473522430359" expanded="true" signature="341:846" ph="{...}" />
+            <marker date="1473522430359" expanded="true" signature="451:498" ph="{...}" />
+            <marker date="1473522430359" expanded="true" signature="561:840" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../ExPho.Core/Entities/Team.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <marker date="1473601445942" expanded="true" signature="6:96" ph="..." />
+            <marker date="1473601445942" expanded="true" signature="128:762" ph="{...}" />
+            <marker date="1473601445942" expanded="true" signature="135:345" ph="/* ... */" />
+            <marker date="1473601445942" expanded="true" signature="367:760" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../ExPho.Core/Entities/Olympiad.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+          <folding>
+            <marker date="1473520948459" expanded="true" signature="6:13" ph="..." />
+            <marker date="1473520948459" expanded="true" signature="6:47" ph="..." />
+            <marker date="1473520948459" expanded="true" signature="78:349" ph="{...}" />
+            <marker date="1473520948459" expanded="true" signature="106:347" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../ExPho.Core/Context/ApplicationDbContext.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="29" column="52" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
+          <folding>
+            <marker date="1473521600427" expanded="true" signature="6:217" ph="..." />
+            <marker date="1473521600427" expanded="true" signature="247:939" ph="{...}" />
+            <marker date="1473521600427" expanded="true" signature="324:937" ph="{...}" />
+            <marker date="1473521600427" expanded="true" signature="432:452" ph="{...}" />
+            <marker date="1473521600427" expanded="true" signature="505:572" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../ExPhO/Models/OlympiadModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+          <folding>
+            <marker date="1473522430167" expanded="true" signature="37:168" ph="{...}" />
+            <marker date="1473522430167" expanded="true" signature="70:166" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../ExPho.Core/Heplers/JuryHelper.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1471781807501" expanded="true" signature="6:168" ph="..." />
+            <marker date="1471781807501" expanded="true" signature="198:832" ph="{...}" />
+            <marker date="1471781807501" expanded="true" signature="228:830" ph="{...}" />
+            <marker date="1471781807501" expanded="true" signature="309:379" ph="{...}" />
+            <marker date="1471781807501" expanded="true" signature="415:516" ph="{...}" />
+            <marker date="1471781807501" expanded="true" signature="561:668" ph="{...}" />
+            <marker date="1471781807501" expanded="true" signature="706:824" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../ExPho.Core/Heplers/TeamHelper.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="34" column="74" selection-start-line="34" selection-start-column="74" selection-end-line="34" selection-end-column="74" />
+          <folding>
+            <marker date="1473615123709" expanded="true" signature="6:105" ph="..." />
+            <marker date="1473615123709" expanded="true" signature="135:825" ph="{...}" />
+            <marker date="1473615123709" expanded="true" signature="165:823" ph="{...}" />
+            <marker date="1473615123709" expanded="true" signature="247:318" ph="{...}" />
+            <marker date="1473615123709" expanded="true" signature="355:438" ph="{...}" />
+            <marker date="1473615123709" expanded="true" signature="474:538" ph="{...}" />
+            <marker date="1473615123709" expanded="true" signature="574:668" ph="{...}" />
+            <marker date="1473615123709" expanded="true" signature="721:817" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../ExPhO/ApiControllers/TeamController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="27" column="44" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
+          <folding>
+            <marker date="1473614664065" expanded="true" signature="6:190" ph="..." />
+            <marker date="1473614664065" expanded="true" signature="222:980" ph="{...}" />
+            <marker date="1473614664065" expanded="true" signature="270:767" ph="{...}" />
+            <marker date="1473614664065" expanded="true" signature="427:638" ph="{...}" />
+            <marker date="1473614664065" expanded="true" signature="693:761" ph="{...}" />
+            <marker date="1473614664065" expanded="true" signature="795:978" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../ExPhO/ApiControllers/AdministratorController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
+          <folding>
+            <marker date="1473617386833" expanded="true" signature="6:199" ph="..." />
+            <marker date="1473617386833" expanded="true" signature="231:1748" ph="{...}" />
+            <marker date="1473617386833" expanded="true" signature="339:1746" ph="{...}" />
+            <marker date="1473617386833" expanded="true" signature="476:733" ph="{...}" />
+            <marker date="1473617386833" expanded="true" signature="814:1087" ph="{...}" />
+            <marker date="1473617386833" expanded="true" signature="1159:1740" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../ExPhO/ApiControllers/TeacherController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <marker date="1473619709051" expanded="true" signature="6:179" ph="..." />
+            <marker date="1473619709051" expanded="true" signature="211:796" ph="{...}" />
+            <marker date="1473619709051" expanded="true" signature="309:794" ph="{...}" />
+            <marker date="1473619709051" expanded="true" signature="478:788" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

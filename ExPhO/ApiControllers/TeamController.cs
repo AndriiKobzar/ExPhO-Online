@@ -4,7 +4,7 @@ using System.Net;
 using System.Web;
 using System.Web.Http;
 using ExPho.Core.Context;
-using ExPho.Core.Heplers;
+using ExPho.Core.Helpers;
 using ExPhO.Core.Entities;
 
 namespace ExPhO.ApiControllers

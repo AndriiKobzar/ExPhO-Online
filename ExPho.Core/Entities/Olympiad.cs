@@ -11,5 +11,6 @@ namespace ExPhO.Core.Entities
         public virtual List<Team> Teams { get; set; }
         public virtual List<Jury> Juries { get; set; }
         public virtual List<Visit> Schedule { get; set; }
+        public virtual List<Problem> Problems { get; set; }
     }
 }
