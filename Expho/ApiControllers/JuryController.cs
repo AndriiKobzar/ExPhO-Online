@@ -11,12 +11,15 @@ namespace ExPho
     {
         JuryHelper _helper = new JuryHelper();
 
+        [HttpGet]
+        [Route("jury/all")]
         public List<Jury> GetAllJuries(int olympiadId)
         {
             return _helper.GetAllByOlympiad(olympiadId);
         }
 
         [HttpPost]
+        [Route("jury/mark")]
         public HttpResponseMessage PutMark(PutMarkModel model)
         {
             _helper.PutMark(model.olympiadId, model.teamId, model.problemId, model.mark);

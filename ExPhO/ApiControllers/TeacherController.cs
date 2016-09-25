@@ -16,6 +16,8 @@ namespace ExPhO.ApiControllers
     {
         ApplicationDbContext _context = new ApplicationDbContext();
         const int maxTeamSize = 6;
+
+        [Route("teacher/addTeam/{olympiadId}")]
         [HttpPost]
         public HttpResponseMessage AddTeam(int olympiadId, TeamModel team)
         {

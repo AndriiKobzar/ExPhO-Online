@@ -17,6 +17,8 @@ namespace ExPhO.ApiControllers
     {
         ApplicationDbContext _context = new ApplicationDbContext();
         OlympiadHelper helper = new OlympiadHelper();
+
+        [Route("olympiad/{id}")]
         [HttpGet]
         public Olympiad GetOlympiad(int id)
         {
@@ -28,7 +30,7 @@ namespace ExPhO.ApiControllers
             return olympiad;
         }
 
-
+        [Route("olympiad")]
         [HttpPost]
         public Olympiad CreateOlympiad(OlympiadModel model)
         {
@@ -42,7 +44,8 @@ namespace ExPhO.ApiControllers
             _context.SaveChanges();
             return olympiad;
         }
-
+        [Route("olympiad/{olympiadId}/jury/{juryId}")]
+        [HttpPost]
         public HttpResponseMessage AddJury(int olympiadId, int juryId)
         {
             var jury = _context.Juries.FirstOrDefault(t => t.Id == juryId);
@@ -59,11 +62,14 @@ namespace ExPhO.ApiControllers
             _context.SaveChanges();
             return new HttpResponseMessage(HttpStatusCode.Accepted);
         }
+
+        [Route("olympiad/schedule")]
         [HttpGet]
         public List<Visit> GetSchedule(int olympiadId)
         {
             return helper.GetById(olympiadId).Schedule.ToList();
         }
+        [Route("olympiad/schedule")]
         [HttpPost]
         public List<Visit> CreateSchedule(CreateScheduleModel model)
         {

@@ -1,0 +1,16 @@
+{
+  "name": "ExPhO",
+  "homepage": "https://github.com/AndriiKobzar/ExPhO-Online",
+  "authors": [
+    "Andrii Kobzar <andrykobzar@gmail.com>"
+  ],
+  "description": "project for Experimental Physics Olympiad informatization",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "angular-ui-router": "^0.3.1"
+  }
+}
