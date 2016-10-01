@@ -1,4 +1,5 @@
-<div>
-    <select ng-model="ctrl.userRole" ng-options="ctrl.roles"></select>
+<div class="roleSelect">
+    <select ng-model="ctrl.userRole" ng-options="o as o for o in ctrl.roles"></select>
+    
     <button class="btn btn-default" ng-click="ctrl.nextStep()" />
 </div>
