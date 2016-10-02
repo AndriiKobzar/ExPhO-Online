@@ -13,6 +13,11 @@
                 url: '/info',
                 templateUrl: '/html/registration/generalInfo.html',
                 controller: 'InfoController'
+            }).
+            state('additionalInfo', {
+                url: '/additionalInfo',
+                templateUrl: '/html/registration/additionalInfo.html',
+                controller: 'AdditionalInfoController as ctrl'
             });
     }).
     config(function ($translateProvider) {
