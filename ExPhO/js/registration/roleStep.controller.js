@@ -1,19 +1,26 @@
 ﻿(function (){
-    angular.module("Registration").controller("RoleController", function () {
+    angular.module("Registration").controller("RoleController", function (RegistrationService, $state) {
         var self = this;
         self.roles = [
-            'Jury',
-            'Teacher',
-            'Learner'
+            {
+                id:1,
+                name: 'ROLES.JURY'
+            },
+            {
+                id:2,
+                name: 'ROLES.TEACHER'
+            },
+            {
+                id:3,
+                name: 'ROLES.LEARNER'
+            }
         ]
         self.userRole = self.roles[0];
-        self.name = null;
-        self.surname = null;
-
         self.nextStep = nextStep;
 
         function nextStep(){
-            alert('nigga');
+            RegistrationService.addInfo({ role: self.userRole.id });
+            $state.go("info");
         }
     });
 })();

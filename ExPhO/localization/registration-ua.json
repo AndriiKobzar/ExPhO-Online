@@ -1,0 +1,11 @@
+﻿{
+  "NAME": "Ім'я",
+  "SURNAME": "Прізвище",
+  "NEXT_STEP": "Далі",
+  "CHOOSE_ROLE": "Оберіть роль",
+  "ROLES": {
+    "JURY": "Жюрі",
+    "TEACHER": "Вчитель",
+    "LEARNER": "Учасник"
+  }
+}

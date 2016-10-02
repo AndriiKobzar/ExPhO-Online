@@ -11,6 +11,11 @@
   "dependencies": {
     "angular": "^1.5.8",
     "angular-route": "^1.5.8",
-    "angular-ui-router": "^0.3.1"
+    "angular-ui-router": "^0.3.1",
+    "angular-dynamic-locale": "^0.1.32",
+    "angular-translate-loader-static-files": "^2.12.1"
+  },
+  "devDependencies": {
+    "angular-translate": "^2.12.1"
   }
 }

@@ -1,7 +1,7 @@
 ﻿(function () {
-    angular.module("Registration", ["ui.router"]).
-    config(config);
-    function config ($stateProvider, $urlRouterProvider) {
+    angular.module("Registration", ["ui.router", 'pascalprecht.translate', 'tmh.dynamicLocale']).
+    config(
+    function config($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise('/role');
         $stateProvider.
             state('role', {
@@ -11,8 +11,16 @@
             }).
             state('info', {
                 url: '/info',
-                templateUrl: '/html/registration/info.html',
+                templateUrl: '/html/registration/generalInfo.html',
                 controller: 'InfoController'
             });
-    };
+    }).
+    config(function ($translateProvider) {
+        $translateProvider.useStaticFilesLoader({
+            prefix: "/localization/registration-",
+            suffix:".json"
+        });
+        $translateProvider.preferredLanguage("ua");
+        $translateProvider.forceAsyncReload(true);
+    });
 })();

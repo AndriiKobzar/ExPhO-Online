@@ -30,8 +30,7 @@
         </div>
     </div>
     <div class="container body-content">
-        <script src="/bower_components/angular/angular.js"></script>
-        <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
         @RenderBody()
         <hr />
         <footer>
@@ -41,6 +40,11 @@
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="/bower_components/angular-translate/angular-translate.min.js"></script>
+    <script src="/bower_components/angular-dynamic-locale/tmhDynamicLocale.min.js"></script>
+    <script src="/bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
     @RenderSection("scripts", required: false)
 
 </body>

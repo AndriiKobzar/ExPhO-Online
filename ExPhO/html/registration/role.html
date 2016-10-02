@@ -1,5 +1,7 @@
 <div class="roleSelect">
-    <select ng-model="ctrl.userRole" ng-options="o as o for o in ctrl.roles"></select>
-    
-    <button class="btn btn-default" ng-click="ctrl.nextStep()" />
+    <div class="input-group">
+        <label for="roleSelector" translate="CHOOSE_ROLE"></label>
+        <select id="roleSelector" ng-model="ctrl.userRole" ng-options="o as o.name|translate for o in ctrl.roles"></select>
+    </div>
+    <button class="btn btn-default" ng-click="ctrl.nextStep()" translate="NEXT_STEP" />
 </div>
