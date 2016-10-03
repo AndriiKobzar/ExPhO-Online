@@ -10,7 +10,19 @@
 
         function next() {
             RegistrationService.addInfo(self.registerInfo);
-            $state.go("additionalInfo");
+            switch (RegistrationService.getInfo().role) {
+                case 1:
+                    $state.go("jury");
+                    break;
+                case 2:
+                    $state.go("teacher");
+                    break;
+                case 3:
+                    $state.go("learner");
+                    break;
+                default:
+                    break;
+            }
         }
     });
 })();

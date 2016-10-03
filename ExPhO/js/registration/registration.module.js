@@ -14,10 +14,20 @@
                 templateUrl: '/html/registration/generalInfo.html',
                 controller: 'InfoController'
             }).
-            state('additionalInfo', {
-                url: '/additionalInfo',
-                templateUrl: '/html/registration/additionalInfo.html',
-                controller: 'AdditionalInfoController as ctrl'
+            state('jury', {
+                url: '/jury',
+                templateUrl: '/html/register/juryRegistration.html',
+                controller: 'JuryRegistration as ctrl'
+            }).
+            state('teacher', {
+                url: '/teacher',
+                templateUrl: '/html/register/teacherRegistration.html',
+                controller: 'TeacherRegistration as ctrl'
+            }).
+            state('learner', {
+                url: '/learner',
+                templateUrl: '/html/register/learnerRegistration.html',
+                controller: 'LearnerRegistration as ctrl'
             });
     }).
     config(function ($translateProvider) {
