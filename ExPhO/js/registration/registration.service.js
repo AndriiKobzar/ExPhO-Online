@@ -4,12 +4,16 @@
         function addInfo(newinfo) {
             info = angular.merge(info, newinfo);
         }
+        function getInfo(){
+            return info;
+        }
         function register() {
             $http.post();
         }
         return {
             addInfo: addInfo,
-            register: register
+            register: register,
+            getInfo: getInfo 
         }
     }])
 })();
