@@ -12,21 +12,21 @@
             state('info', {
                 url: '/info',
                 templateUrl: '/html/registration/generalInfo.html',
-                controller: 'InfoController'
+                controller: 'InfoController as ctrl'
             }).
             state('jury', {
                 url: '/jury',
-                templateUrl: '/html/register/juryRegistration.html',
+                templateUrl: '/html/registration/juryRegistration.html',
                 controller: 'JuryRegistration as ctrl'
             }).
             state('teacher', {
                 url: '/teacher',
-                templateUrl: '/html/register/teacherRegistration.html',
+                templateUrl: '/html/registration/teacherRegistration.html',
                 controller: 'TeacherRegistration as ctrl'
             }).
             state('learner', {
                 url: '/learner',
-                templateUrl: '/html/register/learnerRegistration.html',
+                templateUrl: '/html/registration/learnerRegistration.html',
                 controller: 'LearnerRegistration as ctrl'
             });
     }).

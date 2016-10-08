@@ -7,6 +7,13 @@
             confirmPassword:"",
         };
         self.next=next;
+        activate();
+
+        function activate() {
+            if (RegistrationService.getInfo() == null) {
+                $state.go("role");
+            }
+        }
 
         function next() {
             RegistrationService.addInfo(self.registerInfo);

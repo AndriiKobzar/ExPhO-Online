@@ -2,8 +2,6 @@
 @{
     ViewBag.Title = "Register";
 }
-
-<h2>@ViewBag.Title.</h2>
 <div ng-app="Registration">
     <div ui-view></div>
 </div>
@@ -48,8 +46,11 @@
 @section Scripts {
     <script src="/js/registration/registration.module.js"></script>
     <script src="/js/registration/registration.service.js"></script>
+    <script src="/js/registration/commonInfo/commonInfo.directive.js"></script>
     <script src="/js/registration/roleStep.controller.js"></script>
     <script src="/js/registration/info.controller.js"></script>
-    <script src="/js/registration/additionalInfo.controller.js"></script>
+    <script src="/js/registration/jury.controller.js"></script>
+    <script src="/js/registration/learner.controller.js"></script>
+    <script src="/js/registration/teacher.controller.js"></script>
     @Scripts.Render("~/bundles/jqueryval")
 }

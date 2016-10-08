@@ -1,4 +1,4 @@
 <div>
-    <div ng-include="/html/registration/additionalInfo.html">
-    </div>
+    <common-info ng-model="ctrl.registrationInfo"></common-info>
+    <input type="submit" class="btn btn-success" translate="REGISTER" ng-click="ctrl.register()"/>
 </div>

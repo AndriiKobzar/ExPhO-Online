@@ -1,19 +1,19 @@
 ﻿<div class="generalinfo">
     <div class="input-group">
-        <label for="email" translate="EMAIL"></label>
-        <input type="email" id="email" ng-model="ctrl.registerInfo.userEmail" />
+        <label for="email" translate="EMAIL" class="input-group-addon"></label>
+        <input type="email" id="email" ng-model="ctrl.registerInfo.userEmail" class="form-control"/>
     </div>
     <div class="input-group">
-        <label for="password" translate="PASSWORD"></label>
-        <input type="password" id="password" ng-model="ctrl.registerInfo.password" /> 
+        <label for="password" translate="PASSWORD" class="input-group-addon"></label>
+        <input type="password" id="password" ng-model="ctrl.registerInfo.password" class="form-control" /> 
     </div>
     <div class="input-group">
-        <label for="confirmPassword" translate="PASSWORD"></label>
-        <input type="confirmPassword" id="confirmPassword" ng-model="ctrl.registerInfo.confirmPassword" /> 
+        <label for="confirmPassword" translate="CONFIRM_PASSWORD" class="input-group-addon"></label>
+        <input type="password" id="confirmPassword" ng-model="ctrl.registerInfo.confirmPassword" class="form-control" /> 
     </div>
     <input type="submit" 
            class="btn btn-default"
            translate="NEXT_STEP" 
-           ng-disabled="!(ctrl.registerInfo.password&&ctrl.registerInfo.confirmPassword)&&ctrl.registerInfo.password===ctrl.registerInfo.confirmPassword" 
+           ng-disabled="!ctrl.registerInfo.userEmail||!ctrl.registerInfo.password||!ctrl.registerInfo.confirmPassword||(ctrl.registerInfo.password!==ctrl.registerInfo.confirmPassword)" 
            ng-click="ctrl.next()"/>
 </div>

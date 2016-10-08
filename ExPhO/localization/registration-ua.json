@@ -1,8 +1,13 @@
 ﻿{
   "NAME": "Ім'я",
   "SURNAME": "Прізвище",
+  "EMAIL": "Пошта",
   "NEXT_STEP": "Далі",
   "CHOOSE_ROLE": "Оберіть роль",
+  "PASSWORD": "Пароль",
+  "CONFIRM_PASSWORD": "Підтверити пароль",
+  "PHONE": "Телефон",
+  "INSTITUTION": "Заклад, який Ви представляєте",
   "ROLES": {
     "JURY": "Жюрі",
     "TEACHER": "Вчитель",
