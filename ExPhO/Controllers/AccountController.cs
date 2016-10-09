@@ -75,23 +75,26 @@ namespace ExPhO.Controllers
             {
                 return View(model);
             }
-
-            // This doesn't count login failures towards account lockout
-            // To enable password failures to trigger account lockout, change to shouldLockout: true
-            var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
-            switch (result)
+            if (new ApplicationUserHelper().GetByEmail(model.Email)?.EmailConfirmed == true)
             {
-                case SignInStatus.Success:
-                    return RedirectToLocal(returnUrl);
-                case SignInStatus.LockedOut:
-                    return View("Lockout");
-                case SignInStatus.RequiresVerification:
-                    return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
-                case SignInStatus.Failure:
-                default:
-                    ModelState.AddModelError("", "Invalid login attempt.");
-                    return View(model);
+                // This doesn't count login failures towards account lockout
+                // To enable password failures to trigger account lockout, change to shouldLockout: true
+                var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
+                switch (result)
+                {
+                    case SignInStatus.Success:
+                        return RedirectToLocal(returnUrl);
+                    case SignInStatus.LockedOut:
+                        return View("Lockout");
+                    case SignInStatus.RequiresVerification:
+                        return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
+                    case SignInStatus.Failure:
+                    default:
+                        ModelState.AddModelError("", "Invalid login attempt.");
+                        return View(model);
+                }
             }
+            return View("NeedsConfirmation");
         }
 
         //
@@ -149,16 +152,44 @@ namespace ExPhO.Controllers
         // POST: /Account/Register
         [HttpPost]
         [AllowAnonymous]
-        [ValidateAntiForgeryToken]
         public async Task<ActionResult> Register(RegisterViewModel model)
         {
             if (ModelState.IsValid)
             {
+                string userRole;
+                switch (model.Role)
+                {
+                    case 1:
+                        userRole = RolesHelper.JURY;
+                        break;
+                    case 2:
+                        userRole = RolesHelper.TEACHER;
+                        break;
+                    case 3:
+                    default:
+                        userRole = RolesHelper.LEARNER;
+                        break;
+                }
                 var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                Roles.AddUserToRole(user.Email, userRole);
+                switch (userRole)
+                {
+                    case RolesHelper.JURY:
+                        new JuryHelper().Insert(new Jury() { Email = user.Email, Name = user.UserName, Phone = model.Phone });
+                        break;
+                    case RolesHelper.LEARNER:
+                        new LearnerHelper().Insert(new Learner() { Email = user.Email, Name = user.UserName, Phone = model.Phone });
+                        break;
+                    case RolesHelper.TEACHER:
+                        new TeacherHelper().Insert(new Teacher() { Email = user.Email, Name = user.UserName, Phone = model.Phone });
+                        break;
+                    default:
+                        break;
+                }
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
+                    //await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
                     
                     // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
@@ -166,7 +197,7 @@ namespace ExPhO.Controllers
                      var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code, role=model.Role }, protocol: Request.Url.Scheme);
                      await UserManager.SendEmailAsync(user.Id, "Підтвердіть обліковий запис", "Підтвердіть обліковий запис за <a href=\"" + callbackUrl + "\">посиланням</a>");
 
-                    return RedirectToAction("Index", "Home");
+                    return View("ConfirmRequest");
                 }
                 AddErrors(result);
             }
@@ -174,7 +205,7 @@ namespace ExPhO.Controllers
             // If we got this far, something failed, redisplay form
             return View(model);
         }
-
+        
         //
         // GET: /Account/ConfirmEmail
         [AllowAnonymous]
@@ -185,28 +216,6 @@ namespace ExPhO.Controllers
                 return View("Error");
             }
             var result = await UserManager.ConfirmEmailAsync(userId, code);
-            if (result.Succeeded)
-            {
-                var user = new ApplicationUserHelper().GetById(userId);
-                Roles.AddUserToRole(user.Email, role);
-                switch (role)
-                {
-                    case RolesHelper.JURY:
-                        Roles.AddUserToRole(user.Email, role);
-                        new TeacherHelper().Insert(new Teacher() { Email = user.Email, Name = user.UserName });
-                        break;
-                    case RolesHelper.LEARNER:
-                        Roles.AddUserToRole(user.Email, role);
-                        new LearnerHelper().Insert(new Learner() { Email = user.Email, Name = user.UserName });
-                        break;
-                    case RolesHelper.TEACHER:
-                        Roles.AddUserToRole(user.Email, role);
-                        new JuryHelper().Insert(new Jury() { Email = user.Email, Name = user.UserName });
-                        break;
-                    default:
-                        break;
-                }
-            }
             return View(result.Succeeded ? "ConfirmEmail" : "Error");
         }
 

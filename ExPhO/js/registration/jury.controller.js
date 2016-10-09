@@ -1,8 +1,13 @@
 (function(){
     angular.module("Registration").controller("JuryRegistration", function (RegistrationService, $state) {
         var self = this;
-        self.registrationModel = {};
-
+        self.registrationInfo = {
+            name: "",
+            surname: "",
+            phone: "",
+            institution:""
+        };
+        self.register = register;
         activate();
 
         function activate() {
@@ -11,7 +16,7 @@
             }
         }
         function register() {
-            RegistrationService.addInfo(self.registrationModel);
+            RegistrationService.addInfo(self.registrationInfo);
             RegistrationService.register();
         }
     });

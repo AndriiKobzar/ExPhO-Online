@@ -2,7 +2,7 @@
     angular.module("Registration").controller("InfoController", function (RegistrationService, $state) {
         var self = this;
         self.registerInfo={
-            userEmail:"",
+            email:"",
             password:"",
             confirmPassword:"",
         };

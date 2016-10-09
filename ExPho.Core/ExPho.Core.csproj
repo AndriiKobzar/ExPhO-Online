@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Context\ApplicationDbContext.cs" />
     <Compile Include="Entities\ApplicationUser.cs" />
+    <Compile Include="Entities\IOlympiadPerson.cs" />
     <Compile Include="Entities\Jury.cs" />
     <Compile Include="Entities\Learner.cs" />
     <Compile Include="Entities\Olympiad.cs" />
@@ -86,6 +87,10 @@
     <Compile Include="Migrations\201609240855284_Fixes.Designer.cs">
       <DependentUpon>201609240855284_Fixes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610091332206_MoreFields.cs" />
+    <Compile Include="Migrations\201610091332206_MoreFields.Designer.cs">
+      <DependentUpon>201610091332206_MoreFields.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -102,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201609240855284_Fixes.resx">
       <DependentUpon>201609240855284_Fixes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610091332206_MoreFields.resx">
+      <DependentUpon>201610091332206_MoreFields.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

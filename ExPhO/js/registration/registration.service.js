@@ -12,7 +12,7 @@
             return info;
         }
         function register() {
-            $http.post("/",info);
+            $http.post("/Account/Register",info);
         }
         function getSchools() {
             $http.get("/api/schools/all").then(function (schools) {
@@ -22,7 +22,8 @@
         return {
             addInfo: addInfo,
             register: register,
-            getInfo: getInfo 
+            getInfo: getInfo,
+            getSchools: getSchools
         }
     }])
 })();

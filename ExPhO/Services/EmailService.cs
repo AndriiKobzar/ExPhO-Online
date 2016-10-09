@@ -11,14 +11,15 @@ namespace ExPhO.Services
 {
     public class EmailService : IIdentityMessageService
     {
-        private const string EMAIL = "expho@gmail.com";
-        private const string PASSWORD = "password";
+        private const string EMAIL = "expho@ukr.net";
+        private const string PASSWORD = "!G\"#rWvXz]/k6z[k";
         public Task SendAsync(IdentityMessage message)
         {
-            using (SmtpClient client = new SmtpClient("smtp.gmail.com", 587))
+            using (SmtpClient client = new SmtpClient("smtp.ukr.net", 465))
             {
                 client.UseDefaultCredentials = false;
-                client.Credentials = new NetworkCredential(EMAIL, PASSWORD);           
+                client.Credentials = new NetworkCredential(EMAIL, PASSWORD);
+                client.EnableSsl = true;          
                 using (MailMessage mailMessage = new MailMessage(EMAIL, message.Destination))
                 {
                     mailMessage.Body = message.Body;
