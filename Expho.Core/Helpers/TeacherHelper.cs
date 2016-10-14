@@ -26,9 +26,13 @@ namespace ExPho.Core.Helpers
         }
         public Teacher Insert(Teacher teacher)
         {
-            context.Teachers.Add(teacher);
-            context.SaveChanges();
-            return teacher;
+            if (context.Teachers.Where(t => t.Email == teacher.Email).FirstOrDefault() == null)
+            {
+                context.Teachers.Add(teacher);
+                context.SaveChanges();
+                return teacher;
+            }
+            throw new AlreadyExistsException("Jury already exists.");
         }
     }
 }

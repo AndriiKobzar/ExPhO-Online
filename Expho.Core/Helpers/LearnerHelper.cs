@@ -26,9 +26,13 @@ namespace ExPho.Core.Helpers
         }
         public Learner Insert(Learner learner)
         {
-            context.Learners.Add(learner);
-            context.SaveChanges();
-            return learner;
+            if (context.Learners.Where(l => l.Email == learner.Email).FirstOrDefault() == null)
+            {
+                context.Learners.Add(learner);
+                context.SaveChanges();
+                return learner;
+            }
+            throw new AlreadyExistsException("Learner already exists");
         }
     }
 }

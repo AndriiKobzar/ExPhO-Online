@@ -12,6 +12,8 @@ using ExPhO.Models;
 using ExPhO.Core.Entities;
 using System.Web.Security;
 using ExPho.Core.Helpers;
+using Microsoft.AspNet.Identity.EntityFramework;
+using ExPho.Core.Context;
 
 namespace ExPhO.Controllers
 {
@@ -94,7 +96,11 @@ namespace ExPhO.Controllers
                         return View(model);
                 }
             }
-            return View("NeedsConfirmation");
+            else
+            {
+                ModelState.AddModelError("", "Обліковий запис не підтверджено");
+                return View(model);
+            }
         }
 
         //
@@ -148,7 +154,7 @@ namespace ExPhO.Controllers
             return View();
         }
 
-        //
+        //j
         // POST: /Account/Register
         [HttpPost]
         [AllowAnonymous]
@@ -171,22 +177,24 @@ namespace ExPhO.Controllers
                         break;
                 }
                 var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
-                Roles.AddUserToRole(user.Email, userRole);
+                
+                var result = await UserManager.CreateAsync(user, model.Password);
                 switch (userRole)
                 {
                     case RolesHelper.JURY:
-                        new JuryHelper().Insert(new Jury() { Email = user.Email, Name = user.UserName, Phone = model.Phone });
+                        new JuryHelper().Insert(new Jury() { Email = user.Email, Name = model.Name, Surname=model.Surname, Phone = model.Phone });
                         break;
                     case RolesHelper.LEARNER:
-                        new LearnerHelper().Insert(new Learner() { Email = user.Email, Name = user.UserName, Phone = model.Phone });
+                        new LearnerHelper().Insert(new Learner() { Email = user.Email, Name = model.Name, Surname = model.Surname, Phone = model.Phone });
                         break;
                     case RolesHelper.TEACHER:
-                        new TeacherHelper().Insert(new Teacher() { Email = user.Email, Name = user.UserName, Phone = model.Phone });
+                        new TeacherHelper().Insert(new Teacher() { Email = user.Email, Name = model.Name, Surname = model.Surname, Phone = model.Phone });
                         break;
                     default:
                         break;
                 }
-                var result = await UserManager.CreateAsync(user, model.Password);
+                var rm = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(new ApplicationDbContext()));
+                UserManager.AddToRole(user.Id,userRole);
                 if (result.Succeeded)
                 {
                     //await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
@@ -245,10 +253,10 @@ namespace ExPhO.Controllers
 
                 // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
                 // Send an email with this link
-                // string code = await UserManager.GeneratePasswordResetTokenAsync(user.Id);
-                // var callbackUrl = Url.Action("ResetPassword", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);		
-                // await UserManager.SendEmailAsync(user.Id, "Reset Password", "Please reset your password by clicking <a href=\"" + callbackUrl + "\">here</a>");
-                // return RedirectToAction("ForgotPasswordConfirmation", "Account");
+                string code = await UserManager.GeneratePasswordResetTokenAsync(user.Id);
+                var callbackUrl = Url.Action("ResetPassword", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);		
+                await UserManager.SendEmailAsync(user.Id, "Reset Password", "Please reset your password by clicking <a href=\"" + callbackUrl + "\">here</a>");
+                return RedirectToAction("ForgotPasswordConfirmation", "Account");
             }
 
             // If we got this far, something failed, redisplay form

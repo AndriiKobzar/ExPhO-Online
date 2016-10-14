@@ -1,6 +1,9 @@
 namespace ExPho.Core.Migrations
 {
+    using Context;
     using Helpers;
+    using Microsoft.AspNet.Identity;
+    using Microsoft.AspNet.Identity.EntityFramework;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -28,14 +31,25 @@ namespace ExPho.Core.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
-            if (Roles.RoleExists(RolesHelper.ADMINISTRATOR))
-                Roles.CreateRole(RolesHelper.ADMINISTRATOR);
-            if (Roles.RoleExists(RolesHelper.TEACHER))
-                Roles.CreateRole(RolesHelper.TEACHER);
-            if (Roles.RoleExists(RolesHelper.LEARNER))
-                Roles.CreateRole(RolesHelper.LEARNER);
-            if (Roles.RoleExists(RolesHelper.JURY))
-                Roles.CreateRole(RolesHelper.JURY);
+            var rm = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
+
+            if (!rm.RoleExists(RolesHelper.ADMINISTRATOR))
+                rm.Create(new IdentityRole(RolesHelper.ADMINISTRATOR));
+            if (!rm.RoleExists(RolesHelper.TEACHER))
+                rm.Create(new IdentityRole(RolesHelper.TEACHER));
+            if (!rm.RoleExists(RolesHelper.LEARNER))
+                rm.Create(new IdentityRole(RolesHelper.LEARNER));
+            if (!rm.RoleExists(RolesHelper.JURY))
+                rm.Create(new IdentityRole(RolesHelper.JURY));
+
+            //if (!Roles.RoleExists(RolesHelper.ADMINISTRATOR))
+            //    Roles.CreateRole(RolesHelper.ADMINISTRATOR);
+            //if (!Roles.RoleExists(RolesHelper.TEACHER))
+            //    Roles.CreateRole(RolesHelper.TEACHER);
+            //if (!Roles.RoleExists(RolesHelper.LEARNER))
+            //    Roles.CreateRole(RolesHelper.LEARNER);
+            //if (!Roles.RoleExists(RolesHelper.JURY))
+            //    Roles.CreateRole(RolesHelper.JURY);
         }
     }
 }

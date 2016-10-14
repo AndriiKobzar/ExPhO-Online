@@ -33,11 +33,15 @@ namespace ExPho.Core.Helpers
         {
             return context.Juries.Where(user => user.Email == email).FirstOrDefault();
         }
-        public Jury Insert(Jury jury)
-        {
-            context.Juries.Add(jury);
-            context.SaveChanges();
-            return jury;
+        public Jury Insert(Jury jury) {
+
+            if (context.Juries.Where(j => j.Email == jury.Email).FirstOrDefault() == null)
+            {
+                context.Juries.Add(jury);
+                context.SaveChanges();
+                return jury;
+            }
+            throw new AlreadyExistsException("Jury already exists.");
         }
         public void PutMark(int olympiadId, int teamId, int problemId, double mark)
         {

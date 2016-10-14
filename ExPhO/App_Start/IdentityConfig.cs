@@ -1,23 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using System.Web;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
-using ExPhO.Models;
 using ExPhO.Core.Entities;
 using ExPho.Core.Context;
 using ExPhO.Services;
 
 namespace ExPhO
 {
-    
+
 
     public class SmsService : IIdentityMessageService
     {
@@ -46,7 +41,14 @@ namespace ExPhO
                 RequireUniqueEmail = true
             };
 
-           
+            manager.PasswordValidator = new PasswordValidator()
+            {
+                RequiredLength = 1,
+                RequireDigit = false,
+                RequireLowercase = false,
+                RequireNonLetterOrDigit = false,
+                RequireUppercase = false
+            };
 
             // Configure user lockout defaults
             manager.UserLockoutEnabledByDefault = true;

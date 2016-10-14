@@ -68,6 +68,7 @@
     <Compile Include="Entities\Teacher.cs" />
     <Compile Include="Entities\Team.cs" />
     <Compile Include="Entities\Visit.cs" />
+    <Compile Include="AlreadyExistsException.cs" />
     <Compile Include="Helpers\ApplicationUserHelper.cs" />
     <Compile Include="Helpers\JuryHelper.cs" />
     <Compile Include="Helpers\LearnerHelper.cs" />
