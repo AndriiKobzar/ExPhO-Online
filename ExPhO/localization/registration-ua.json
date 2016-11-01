@@ -8,6 +8,12 @@
   "CONFIRM_PASSWORD": "Підтверити пароль",
   "PHONE": "Телефон",
   "INSTITUTION": "Заклад, який Ви представляєте",
+  "TEACHER_BLOCK": {
+    "LEARNER_NAME": "Ім'я",
+    "LEARNER_SURNAME": "Прізвище",
+    "LEARNER_EMAIL": "Email",
+    "ADD_LEARNER": "Додати учасника"
+  },
   "ROLES": {
     "JURY": "Жюрі",
     "TEACHER": "Вчитель",

@@ -1,4 +1,25 @@
 <div>
-    <div ng-include="html/registration/additionalInfo.html">
+    <common-info ng-model="ctrl.registrationInfo"></common-info>
+    <div class="learners-list">
+        <div ng-repeat="learner in ctrl.learners">
+            <label class="learner-name">{{learner.name+" "+learner.surname}}</label>
+            <label class="learner-email">{{learner.email}}</label>
+        </div>
+        <div class="new-learner">
+            <div class="input-group">
+                <label translate="TEACHER_BLOCK.LEARNER_NAME"></label>
+                <input ng-model="ctrl.newLearner.name" />
+            </div>
+            <div class="input-group">
+                <label translate="TEACHER_BLOCK.LEARNER_SURNAME"></label>
+                <input ng-model="ctrl.newLearner.surname" />
+            </div>
+            <div class="input-group">
+                <label translate="TEACHER_BLOCK.LEARNER_EMAIL"></label>
+                <input ng-model="ctrl.newLearner.email" />
+            </div>
+            <button class="btn btn-default" translate="TEACHER_BLOCK.ADD_LEARNER" ng-click="ctrl.addLearner()"></button>
+        </div>
     </div>
+    <button class="btn btn-default" ng-click="ctrl.register()" translate="REGISTER"></button>
 </div>
