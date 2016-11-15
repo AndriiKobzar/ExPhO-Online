@@ -14,6 +14,8 @@ using System.Web.Security;
 using ExPho.Core.Helpers;
 using Microsoft.AspNet.Identity.EntityFramework;
 using ExPho.Core.Context;
+using ExPhO.Services;
+using ExPhO.Utils;
 
 namespace ExPhO.Controllers
 {
@@ -186,9 +188,16 @@ namespace ExPhO.Controllers
                         break;
                     case RolesHelper.LEARNER:
                         new LearnerHelper().Insert(new Learner() { Email = user.Email, Name = model.Name, Surname = model.Surname, Phone = model.Phone });
+                        
                         break;
                     case RolesHelper.TEACHER:
                         new TeacherHelper().Insert(new Teacher() { Email = user.Email, Name = model.Name, Surname = model.Surname, Phone = model.Phone });
+                        var learnerHelper = new LearnerHelper();
+                        EmailService emailService = new EmailService();
+                        foreach (var item in model.Students)
+                        {
+                            RegisterLearnerFast(item);
+                        }
                         break;
                     default:
                         break;
@@ -443,6 +452,25 @@ namespace ExPhO.Controllers
         public ActionResult ExternalLoginFailure()
         {
             return View();
+        }
+
+        private void RegisterLearnerFast(StudentRegistrationModel model)
+        {
+            var password = PasswordUtil.GeneratePassword();
+            ApplicationUser user = new ApplicationUser() { Email=model.Email, UserName=model.Email };
+            var result = UserManager.Create(user, password);
+            var rm = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(new ApplicationDbContext()));
+            UserManager.AddToRole(user.Id, RolesHelper.LEARNER);
+            if (result.Succeeded)
+            {
+                //await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
+
+                // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
+                // Send an email with this link
+                string code = UserManager.GenerateEmailConfirmationToken(user.Id);
+                var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code, role = RolesHelper.LEARNER }, protocol: Request.Url.Scheme);
+                UserManager.SendEmail(user.Id, "Підтвердіть обліковий запис", "Підтвердіть обліковий запис за <a href=\"" + callbackUrl + "\">посиланням</a>");
+            }
         }
 
         protected override void Dispose(bool disposing)

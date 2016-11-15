@@ -72,6 +72,15 @@ namespace ExPhO.Models
         public string Surname { get; set; }
         public string Phone { get; set; }
         public string Institution { get; set; }
+        public List<StudentRegistrationModel> Students { get; set; }
+    }
+
+    public class StudentRegistrationModel
+    {
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public string Email { get; set; }
+        public int Form { get; set; }
     }
 
     public class ResetPasswordViewModel

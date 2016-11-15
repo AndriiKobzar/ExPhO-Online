@@ -242,6 +242,7 @@
     <Content Include="html\registration\learnerRegistration.html" />
     <Content Include="html\registration\role.html" />
     <Content Include="html\registration\teacherRegistration.html" />
+    <Content Include="js\administrator\administrator.module.js" />
     <Content Include="js\jury\jury.module.js" />
     <Content Include="js\registration\commonInfo\commonInfo.directive.js" />
     <Content Include="js\registration\info.controller.js" />
